@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {Image, TouchableOpacity, Platform } from 'react-native';
+import {Image, TouchableOpacity, Platform, TouchableWithoutFeedback } from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import Icon from './Icon';
@@ -501,11 +501,31 @@ export default class ListItemNB extends NativeBaseComponent {
     }
 
     render() {
-        return(
-            <TouchableOpacity {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1} >
-                {this.renderChildren()}
-            </TouchableOpacity>
-        );
+        if (this.props.menuItem) {
+            return(
+                <View style={{
+                    backgroundColor : this.isItemPressIn ? '#eee' : 'transparent'
+                }}>
+                    <TouchableOpacity {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1}
+                        onPressIn={()=>{
+                            this.isItemPressIn = true;
+                            this.forceUpdate();
+                        }}
+                        onPressOut={()=>{
+                            this.isItemPressIn = false;
+                            this.forceUpdate();
+                        }}>
+                        {this.renderChildren()}
+                    </TouchableOpacity>
+                </View>
+            );
+        } else {
+            return(
+                <TouchableOpacity {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1} >
+                    {this.renderChildren()}
+                </TouchableOpacity>
+            );
+        }
     }
 
 }
