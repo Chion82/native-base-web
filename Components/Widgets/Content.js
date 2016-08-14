@@ -5,7 +5,7 @@ import React from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
-
+import { ScrollView } from 'react-native';
 
 export default class Content extends NativeBaseComponent {
 
@@ -32,7 +32,7 @@ export default class Content extends NativeBaseComponent {
 		const contentContainerStyle = this.props.contentContainerStyle || {};
 		contentContainerStyle.padding = (this.props.padder) ? this.getTheme().contentPadding : 0;
 		return(
-			<KeyboardAwareScrollView resetScrollToCoords={{x:0,y:0}} {...this.prepareRootProps()} contentContainerStyle={contentContainerStyle}>{this.props.children}</KeyboardAwareScrollView>
+			<ScrollView resetScrollToCoords={{x:0,y:0}} {...this.prepareRootProps()} contentContainerStyle={contentContainerStyle}>{this.props.children}</ScrollView>
 		);
 	}
 }
