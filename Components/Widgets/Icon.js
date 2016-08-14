@@ -15,40 +15,35 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 
-var Icon;
-
-function setIconFamily(family) {
-    switch(family) {
-        case 'Ionicons':
-            Icon = Ionicons;
-            break;
-        case 'Entypo':
-            Icon = Entypo;
-            break;
-        case 'FontAwesome':
-            Icon = FontAwesome;
-            break;
-        case 'Foundation':
-            Icon = Foundation;
-            break;
-        case 'MaterialIcons':
-            Icon = MaterialIcons;
-            break;
-        case 'Octicons':
-            Icon = Octicons;
-            break;
-        case 'Zocial':
-            Icon = Zocial;
-            break;
-        default:
-            Icon = Ionicons;
-    }
-}
-
-setIconFamily(variables.iconFamily);
-
-
 export default class IconNB extends NativeBaseComponent {
+
+    setIconFamily(family) {
+        switch(family) {
+            case 'Ionicons':
+                this.Icon = Ionicons;
+                break;
+            case 'Entypo':
+                this.Icon = Entypo;
+                break;
+            case 'FontAwesome':
+                this.Icon = FontAwesome;
+                break;
+            case 'Foundation':
+                this.Icon = Foundation;
+                break;
+            case 'MaterialIcons':
+                this.Icon = MaterialIcons;
+                break;
+            case 'Octicons':
+                this.Icon = Octicons;
+                break;
+            case 'Zocial':
+                this.Icon = Zocial;
+                break;
+            default:
+                this.Icon = Ionicons;
+        }
+    }
 
     propTypes: {
         style : React.PropTypes.object
@@ -73,10 +68,12 @@ export default class IconNB extends NativeBaseComponent {
 
     render() {
         if (this.props.family) {
-            setIconFamily(this.props.family);
+            this.setIconFamily(this.props.family);
+        } else {
+            this.setIconFamily(variables.iconFamily)
         }
         return(
-            <Icon {...this.prepareRootProps()}/>
+            <this.Icon {...this.prepareRootProps()}/>
         );
     }
 }
