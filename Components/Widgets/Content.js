@@ -12,12 +12,12 @@ export default class Content extends NativeBaseComponent {
 	propTypes: {
         padder : React.PropTypes.bool,
 		style : React.PropTypes.object
-    }   
+    }
 
 	prepareRootProps() {
 
 		var type = {
-			backgroundColor: 'transparent',
+			backgroundColor: '#fff',
 			flex: 1
 		}
 
