@@ -17,7 +17,7 @@ export default class Content extends NativeBaseComponent {
 	prepareRootProps() {
 
 		var type = {
-			backgroundColor: '#fff',
+			backgroundColor: (this.props.style && this.props.style.backgroundColor) || 'white',
 			flex: 1
 		}
 

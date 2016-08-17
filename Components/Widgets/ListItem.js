@@ -504,7 +504,7 @@ export default class ListItemNB extends NativeBaseComponent {
         if (this.props.menuItem) {
             return(
                 <View style={{
-                    backgroundColor : this.isItemPressIn ? '#eee' : 'transparent'
+                    backgroundColor : this.isItemPressIn ? '#dddddd' : 'white'
                 }}>
                     <TouchableOpacity {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1}
                         onPressIn={()=>{
