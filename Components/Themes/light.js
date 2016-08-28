@@ -10,8 +10,8 @@ export default {
     brandWarning: '#f0ad4e',
     brandSidebar: '#252932',
 
-    fontFamily: (Platform.OS === 'ios' ) ? 'HelveticaNeue' : 'Roboto',
-    btnFontFamily: (Platform.OS === 'ios' ) ? 'HelveticaNeue' : 'Roboto_medium',
+    fontFamily: (Platform.OS === 'ios' ) ? 'HelveticaNeue' : 'inherit',
+    btnFontFamily: (Platform.OS === 'ios' ) ? 'HelveticaNeue' : 'inherit',
     iconFamily: 'Ionicons',
 
     inverseTextColor: '#fff',
