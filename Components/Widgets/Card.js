@@ -1,4 +1,5 @@
-/* @flow */
+/* Original author: @flow */
+/* Modified by: @Chion82 */
 'use strict';
 
 import React from 'react';
@@ -15,11 +16,11 @@ export default class CardNB extends NativeBaseComponent {
     getInitialStyle() {
         return {
             card: {
-                flex: 1,
+                //flex: 1,
                 borderWidth: this.getTheme().borderWidth,
                 borderRadius: this.getTheme().borderRadiusBase,
                 borderColor: this.getTheme().listBorderColor,
-                flexWrap: 'wrap',
+                //flexWrap: 'wrap',
                 borderBottomWidth: 0,
                 backgroundColor: this.props.transparent? 'transparent' : this.getTheme().cardDefaultBg,
                 //shadowColor: this.props.transparent ? undefined : '#000',

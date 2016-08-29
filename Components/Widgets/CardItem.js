@@ -1,4 +1,5 @@
-/* @flow */
+/* Original author: @flow */
+/* Modified by: @Chion82 */
 'use strict';
 
 import React from 'react';
@@ -224,7 +225,7 @@ export default class CardItemNB extends NativeBaseComponent {
         }
         else {
             defaultProps = {
-                foregroundColor: this.getContextForegroundColor()
+                //foregroundColor: this.getContextForegroundColor()
             }
         }
 
@@ -289,8 +290,11 @@ export default class CardItemNB extends NativeBaseComponent {
 
 
     render() {
+        let viewProps = this.prepareRootProps();
+        if (viewProps.header)
+            delete viewProps.header;
         return(
-            <View {...this.prepareRootProps()} >
+            <View {...viewProps} >
                 {this.renderChildren()}
             </View>
         );

@@ -1,4 +1,5 @@
-/* @flow */
+/* Original author: @flow */
+/* Modified by: @Chion82 */
 'use strict';
 
 import React from 'react';
@@ -26,7 +27,10 @@ export default class TextNB extends NativeBaseComponent {
 			style: type
 		}
 
-		return computeProps(this.props, defaultProps);
+		let computedProps = computeProps(this.props, defaultProps);
+        if (computedProps.note)
+            delete computedProps.note;
+        return computedProps;
 
 	}
 	render() {
