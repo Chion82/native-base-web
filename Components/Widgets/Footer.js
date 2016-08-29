@@ -15,10 +15,10 @@ export default class Footer extends NativeBaseComponent {
     getInitialStyle() {
         return {
             navbar: {
-                shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
-                shadowOpacity: 0.1,
-                shadowRadius: 1.5,
+                //shadowColor: '#000',
+                //shadowOffset: {width: 0, height: 2},
+                //shadowOpacity: 0.1,
+                //shadowRadius: 1.5,
                 flexDirection: 'row',
                 alignItems: 'center',
                 justifyContent: (!Array.isArray(this.props.children)) ? 'center' : 'space-between',

@@ -29,12 +29,12 @@ export default class Header extends NativeBaseComponent {
                 alignItems: 'center',
                 paddingHorizontal: 15,
                 paddingTop: (Platform.OS === 'ios' ) ? 15 : 0,
-                shadowColor: '#000',
-                shadowOffset: {width: 0, height: 2},
-                shadowOpacity: 0.1,
-                shadowRadius: 1.5,
+                //shadowColor: '#000',
+                //shadowOffset: {width: 0, height: 2},
+                //shadowOpacity: 0.1,
+                //shadowRadius: 1.5,
                 height: this.getTheme().toolbarHeight,
-                elevation: 3,
+                //elevation: 3,
                 position: 'relative'
             },
             iosToolbarSearch: {

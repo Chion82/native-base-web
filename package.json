@@ -19,7 +19,9 @@
     "clamp": "^1.0.1",
     "color": "~0.11.1",
     "lodash": "~4.11.1",
-    "react-native-vector-icons": "2.0.x",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-icons": "^2.2.1",
     "react-native-checkbox": "~1.0.8",
     "react-native-easy-grid": "0.1.5",
     "react-native-keyboard-aware-scroll-view": "0.1.2"

@@ -31,7 +31,7 @@ export default class Content extends NativeBaseComponent {
 		const contentContainerStyle = this.props.contentContainerStyle || {};
 		contentContainerStyle.padding = (this.props.padder) ? this.getTheme().contentPadding : 0;
 		return(
-			<ScrollView resetScrollToCoords={{x:0,y:0}} {...this.prepareRootProps()} contentContainerStyle={contentContainerStyle}>{this.props.children}</ScrollView>
+			<ScrollView {...this.prepareRootProps()} contentContainerStyle={contentContainerStyle}>{this.props.children}</ScrollView>
 		);
 	}
 }
