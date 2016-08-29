@@ -22,7 +22,7 @@ export default class Title extends NativeBaseComponent {
 			fontSize: this.getTheme().titleFontSize,
 			fontFamily: this.getTheme().btnFontFamily,
 			fontWeight: (Platform.OS === 'ios') ? '500' : undefined,
-			alignSelf: 'center'
+			alignSelf: (Platform.OS === 'ios' ) ? 'center' : 'flex-start'
 		}
 
 		var defaultProps = {
