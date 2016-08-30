@@ -28,7 +28,7 @@ export default class Header extends NativeBaseComponent {
                 flexDirection: 'row',
                 alignItems: 'center',
                 paddingHorizontal: 15,
-                paddingTop: (Platform.OS === 'ios' ) ? 15 : 0,
+                paddingTop: (Platform.OS === 'ios' ) ? 0 : 0,
                 //shadowColor: '#000',
                 //shadowOffset: {width: 0, height: 2},
                 //shadowOpacity: 0.1,
@@ -120,7 +120,7 @@ export default class Header extends NativeBaseComponent {
                 }
                 else {
                     if (Platform.OS === 'ios') {
-                        newChildren.push(<View key='title' style={{position: 'absolute', left: 0, right: 0, top: 13, bottom: 0, alignSelf: 'center', justifyContent: 'center'}}>
+                        newChildren.push(<View key='title' style={{position: 'absolute', left: 0, right: 0, top: 2, bottom: 0, alignSelf: 'center', justifyContent: 'center'}}>
                         {[title[0],subtitle[0]]}
                         </View>)
                         newChildren.push(<View key='btn1' style={{alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginLeft: -14}}>

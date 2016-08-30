@@ -62,7 +62,7 @@ export default function() {
         },
 
         footerHeight: 55,
-        toolbarHeight: (Platform.OS === 'ios' ) ? 64 : 56,
+        toolbarHeight: (Platform.OS === 'ios' ) ? 50 : 56,
         toolbarDefaultBg: (Platform.OS === 'ios' ) ? '#F8F8F8' : '#039BE5',
         toolbarInverseBg: '#222',
 
