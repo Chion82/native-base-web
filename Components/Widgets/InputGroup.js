@@ -93,6 +93,12 @@ export default class InputGroup extends NativeBaseComponent {
         if (props.iconRight)
             delete props.iconRight;
 
+        if (props.success)
+            delete props.success;
+
+        if (props.error)
+            delete props.error;
+
         return props;
 	}
 

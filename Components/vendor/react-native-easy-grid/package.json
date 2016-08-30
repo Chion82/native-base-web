@@ -1,0 +1,55 @@
+{
+  "name": "react-native-easy-grid",
+  "description": "Easy React Native Layout & Grid for the Dumb",
+  "version": "0.1.5",
+  "private": false,
+  "dependencies": {
+    "lodash": "^4.11.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.9.0",
+    "eslint-plugin-react": "^5.0.1",
+    "eslint-plugin-react-native": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekyAnts/react-native-easy-grid.git"
+  },
+  "main": "index.js",
+  "gitHead": "2c93a64d7472356476d7e44bf8a9fcc43e8bcbf1",
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/react-native-easy-grid/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/react-native-easy-grid#readme",
+  "_id": "react-native-easy-grid@0.1.5",
+  "scripts": {},
+  "_shasum": "357e26c891ba5818d83652eae79c9f7d669ff8d2",
+  "_from": "react-native-easy-grid@0.1.5",
+  "_npmVersion": "3.9.5",
+  "_nodeVersion": "4.2.1",
+  "_npmUser": {
+    "name": "sankhadeeproy007",
+    "email": "sankhadeep@sahusoft.com"
+  },
+  "dist": {
+    "shasum": "357e26c891ba5818d83652eae79c9f7d669ff8d2",
+    "size": 30946,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/react-native-easy-grid/download/react-native-easy-grid-0.1.5.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "sankhadeeproy007",
+      "email": "sankhadeep@sahusoft.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/react-native-easy-grid-0.1.5.tgz_1465301221405_0.2329768082126975"
+  },
+  "directories": {},
+  "publish_time": 1465301221919,
+  "_cnpm_publish_time": 1465301221919,
+  "_resolved": "http://registry.npm.taobao.org/react-native-easy-grid/download/react-native-easy-grid-0.1.5.tgz"
+}
