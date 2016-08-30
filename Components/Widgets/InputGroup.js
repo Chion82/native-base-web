@@ -85,7 +85,15 @@ export default class InputGroup extends NativeBaseComponent {
 			key: 'inpGroup'
 		}
 
-		return computeProps(this.props, defaultProps);
+		let props = computeProps(this.props, defaultProps);
+
+        if (props.borderType)
+            delete props.borderType;
+
+        if (props.iconRight)
+            delete props.iconRight;
+
+        return props;
 	}
 
 	getIconProps(icon) {
