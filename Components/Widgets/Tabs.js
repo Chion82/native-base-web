@@ -1,4 +1,5 @@
-/* @flow */
+/* Original author: @flow */
+/* Modified by: @Chion82 */
 'use strict';
 
 import React from 'react';
@@ -30,10 +31,22 @@ export default class TabNB extends NativeBaseComponent {
 
     }
 
+    changeChildrenStyle() {
+        React.Children.forEach(this.props.children, function (child) {
+            if (!child.props.tabLabel)
+                return;
+            if (!child.props.style)
+                child.props.style = {};
+            if (!child.props.style.width)
+                child.props.style.width = Math.round(100/this.props.children.length) + '%';
+        }.bind(this));
+    }
+
     render() {
+        this.changeChildrenStyle();
         return(
             <ScrollableTabView {...this.prepareRootProps()} >
-            {this.props.children}
+                {this.props.children}
             </ScrollableTabView>
         );
     }

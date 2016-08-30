@@ -46,7 +46,7 @@ export default class DefaultTabBar extends NativeBaseComponent {
 
     return (
       <TouchableHighlight underlayColor={this.getTheme().darkenHeader} style={[this.getInitialStyle().tab]} key={name} onPress={() => this.props.goToPage(page)}>
-        <View>
+        <View style={{}}>
           <Text style={{color: isTabActive ? this.getTheme().tabTextColor : this.getTheme().tabTextColor, fontWeight: isTabActive ? 'bold' : 'normal', fontSize: this.getTheme().tabFontSize}}>{name}</Text>
         </View>
       </TouchableHighlight>
@@ -54,6 +54,9 @@ export default class DefaultTabBar extends NativeBaseComponent {
   }
 
   render() {
+
+    deviceWidth = Dimensions.get('window').width;
+
     var numberOfTabs = this.props.tabs.length;
     var tabUnderlineStyle = {
       position: 'absolute',
