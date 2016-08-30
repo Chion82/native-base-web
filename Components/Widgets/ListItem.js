@@ -1,4 +1,5 @@
-/* @flow */
+/* Original author: @flow */
+/* Modified by: @Chion82 */
 'use strict';
 
 import React from 'react';
@@ -205,7 +206,7 @@ export default class ListItemNB extends NativeBaseComponent {
                                 this.getTheme().inputErrorBorderColor :
                                 this.getTheme().listBorderColor
                 },
-                foregroundColor: this.getContextForegroundColor()
+                //foregroundColor: this.getContextForegroundColor()
             }
         }
         else if(child.type == Text) {
@@ -244,7 +245,7 @@ export default class ListItemNB extends NativeBaseComponent {
         }
         else {
             defaultProps = {
-                foregroundColor: this.getContextForegroundColor()
+                //foregroundColor: this.getContextForegroundColor()
             }
         }
         return computeProps(child.props, defaultProps);
@@ -517,6 +518,12 @@ export default class ListItemNB extends NativeBaseComponent {
                         }}>
                         {this.renderChildren()}
                     </TouchableOpacity>
+                </View>
+            );
+        } else if (this.stackedPresent()) {
+            return(
+                <View {...this.prepareRootProps()} >
+                    {this.renderChildren()}
                 </View>
             );
         } else {
