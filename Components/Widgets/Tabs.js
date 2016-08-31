@@ -6,6 +6,7 @@ import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import ScrollableTabView from './../vendor/react-native-scrollable-tab-view';
 import View from './View';
+import _ from 'lodash';
 
 export default class TabNB extends NativeBaseComponent {
 

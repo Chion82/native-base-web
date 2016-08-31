@@ -33,6 +33,7 @@ import Spinner from './Components/Widgets/Spinner';
 // import ProgressBar from './Components/Widgets/ProgressBar';
 import { Col, Row, Grid } from "./Components/vendor/react-native-easy-grid";
 import ScrollableTabView from './Components/Widgets/Tabs';
+import TouchableOpacityScrollable from './Components/Widgets/TouchableOpacityScrollable';
 
 //Suppress unknown prop warnings
 const logFunction = console.error;
@@ -78,5 +79,6 @@ module.exports = {
 	Radio: Radio,
 	// ProgressBar: ProgressBar,
 	Drawer: Drawer,
-	Tabs : ScrollableTabView
+	Tabs : ScrollableTabView,
+    TouchableOpacityScrollable : TouchableOpacityScrollable
 };
