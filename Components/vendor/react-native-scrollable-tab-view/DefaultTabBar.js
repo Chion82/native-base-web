@@ -46,7 +46,11 @@ export default class DefaultTabBar extends NativeBaseComponent {
 
     return (
       <TouchableHighlight underlayColor={this.getTheme().darkenHeader} style={[this.getInitialStyle().tab]} key={name} onPress={() => this.props.goToPage(page)}>
-        <View style={{}}>
+        <View style={{
+            flex : 1,
+            justifyContent : 'center',
+            alignItems : 'center'
+        }}>
           <Text style={{color: isTabActive ? this.getTheme().tabTextColor : this.getTheme().tabTextColor, fontWeight: isTabActive ? 'bold' : 'normal', fontSize: this.getTheme().tabFontSize}}>{name}</Text>
         </View>
       </TouchableHighlight>
