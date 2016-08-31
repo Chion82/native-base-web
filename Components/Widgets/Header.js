@@ -51,7 +51,7 @@ export default class Header extends NativeBaseComponent {
                 backgroundColor: '#fff',
                 borderRadius: 2,
                 borderColor: 'transparent',
-                elevation: 2,
+                //elevation: 2,
                 flex:1
             },
             toolbarButton: {
