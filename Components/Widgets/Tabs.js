@@ -5,6 +5,7 @@ import React from 'react';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import ScrollableTabView from './../vendor/react-native-scrollable-tab-view';
+import View from './View';
 
 export default class TabNB extends NativeBaseComponent {
 
@@ -30,23 +31,35 @@ export default class TabNB extends NativeBaseComponent {
 
     }
 
-    changeChildrenStyle() {
-        React.Children.forEach(this.props.children, function (child) {
-            if (!child.props.tabLabel)
-                return;
-            if (!child.props.style)
-                child.props.style = {};
-            if (!child.props.style.width)
-                child.props.style.width = Math.round(100/this.props.children.length) + '%';
+    renderTabBarChildren() {
+        let children = [];
+        React.Children.forEach(this.props.children, function (child, index) {
+            let ChildType = child.type;
+            let props = _.clone(child.props);
+            let style = _.clone(child.props.style || {});
+            if (props.style)
+                delete props.style;
+
+            style.width = Math.round(100/this.props.children.length) + '%';
+
+            children.push(
+                <ChildType {...props} style={style} key={index}>
+                    {child.props.children}
+                </ChildType>);
         }.bind(this));
+        return children;
     }
 
     render() {
-        this.changeChildrenStyle();
         return(
-            <ScrollableTabView {...this.prepareRootProps()} >
-                {this.props.children}
-            </ScrollableTabView>
+            <View style={{
+                width : '100%',
+                overflowX : 'hidden'
+            }}>
+                <ScrollableTabView {...this.prepareRootProps()} >
+                    {this.renderTabBarChildren()}
+                </ScrollableTabView>
+            </View>
         );
     }
 

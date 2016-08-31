@@ -32,50 +32,50 @@ export default class ScrollableTabView extends NativeBaseComponent {
   }
 
   componentWillMount() {
-    var release = (e, gestureState) => {
-      var relativeGestureDistance = gestureState.dx / deviceWidth,
-          lastPageIndex = this.props.children.length - 1,
-          vx = gestureState.vx,
-          newPage = this.state.currentPage;
+    //var release = (e, gestureState) => {
+    //   var relativeGestureDistance = gestureState.dx / deviceWidth,
+    //       lastPageIndex = this.props.children.length - 1,
+    //       vx = gestureState.vx,
+    //       newPage = this.state.currentPage;
+    //
+    //   if (relativeGestureDistance < -0.5 || (relativeGestureDistance < 0 && vx <= -0.5)) {
+    //     newPage = newPage + 1;
+    //   } else if (relativeGestureDistance > 0.5 || (relativeGestureDistance > 0 && vx >= 0.5)) {
+    //     newPage = newPage - 1;
+    //   }
+    //
+    //   this.props.hasTouch && this.props.hasTouch(false);
+    //   this.goToPage(Math.max(0, Math.min(newPage, this.props.children.length - 1)));
+    // }
 
-      if (relativeGestureDistance < -0.5 || (relativeGestureDistance < 0 && vx <= -0.5)) {
-        newPage = newPage + 1;
-      } else if (relativeGestureDistance > 0.5 || (relativeGestureDistance > 0 && vx >= 0.5)) {
-        newPage = newPage - 1;
-      }
-
-      this.props.hasTouch && this.props.hasTouch(false);
-      this.goToPage(Math.max(0, Math.min(newPage, this.props.children.length - 1)));
-    }
-
-    this._panResponder = PanResponder.create({
-      // Claim responder if it's a horizontal pan
-      onMoveShouldSetPanResponder: (e, gestureState) => {
-        if (Math.abs(gestureState.dx) > Math.abs(gestureState.dy)) {
-          if ((gestureState.moveX <= this.props.edgeHitWidth ||
-              gestureState.moveX >= deviceWidth - this.props.edgeHitWidth) &&
-                this.props.locked !== true) {
-            this.props.hasTouch && this.props.hasTouch(true);
-            return true;
-          }
-        }
-      },
-
-      // Touch is released, scroll to the one that you're closest to
-      onPanResponderRelease: release,
-      onPanResponderTerminate: release,
-
-      // Dragging, move the view with the touch
-      onPanResponderMove: (e, gestureState) => {
-        var dx = gestureState.dx;
-        var lastPageIndex = this.props.children.length - 1;
-
-        // This is awkward because when we are scrolling we are offsetting the underlying view
-        // to the left (-x)
-        var offsetX = dx - (this.state.currentPage * deviceWidth);
-        this.state.scrollValue.setValue(-1 * offsetX / deviceWidth);
-      },
-    });
+    // this._panResponder = PanResponder.create({
+    //   // Claim responder if it's a horizontal pan
+    //   onMoveShouldSetPanResponder: (e, gestureState) => {
+    //     if (Math.abs(gestureState.dx) > Math.abs(gestureState.dy)) {
+    //       if ((gestureState.moveX <= this.props.edgeHitWidth ||
+    //           gestureState.moveX >= deviceWidth - this.props.edgeHitWidth) &&
+    //             this.props.locked !== true) {
+    //         this.props.hasTouch && this.props.hasTouch(true);
+    //         return true;
+    //       }
+    //     }
+    //   },
+    //
+    //   // Touch is released, scroll to the one that you're closest to
+    //   onPanResponderRelease: release,
+    //   onPanResponderTerminate: release,
+    //
+    //   // Dragging, move the view with the touch
+    //   onPanResponderMove: (e, gestureState) => {
+    //     var dx = gestureState.dx;
+    //     var lastPageIndex = this.props.children.length - 1;
+    //
+    //     // This is awkward because when we are scrolling we are offsetting the underlying view
+    //     // to the left (-x)
+    //     var offsetX = dx - (this.state.currentPage * deviceWidth);
+    //     this.state.scrollValue.setValue(-1 * offsetX / deviceWidth);
+    //   },
+    // });
   }
 
   goToPage(pageNumber) {
@@ -124,8 +124,7 @@ export default class ScrollableTabView extends NativeBaseComponent {
     return (
       <View style={{flex: 1}}>
         {this.props.tabBarPosition === 'top' ? this.renderTabBar(tabBarProps) : null}
-        <Animated.View style={[sceneContainerStyle, {transform: [{translateX}]}]}
-          {...this._panResponder.panHandlers}>
+        <Animated.View style={[sceneContainerStyle, {transform: [{translateX}]}]}>
           {this.props.children}
         </Animated.View>
         {this.props.tabBarPosition === 'bottom' ? this.renderTabBar(tabBarProps) : null}
