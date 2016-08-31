@@ -1,5 +1,4 @@
-/* Original author: @flow */
-/* Modified by: @Chion82 */
+/* @flow */
 'use strict';
 
 import React from 'react';
@@ -14,13 +13,8 @@ export default class ViewNB extends NativeBaseComponent {
         padder : React.PropTypes.bool
     }
 	render() {
-
-        let props = _.clone(this.props);
-        if (props.cardBody)
-            delete props.cardBody
-
 		return(
-			<View style={{padding: (this.props.padder) ? this.getTheme().contentPadding : 0, flex: 1}} {...props}></View>
+			<View style={{padding: (this.props.padder) ? this.getTheme().contentPadding : 0, flex: 1}} {...this.props}></View>
 			);
 	}
 }

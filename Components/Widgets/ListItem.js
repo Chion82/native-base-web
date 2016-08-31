@@ -1,9 +1,8 @@
-/* Original author: @flow */
-/* Modified by: @Chion82 */
+/* @flow */
 'use strict';
 
 import React from 'react';
-import {Image, TouchableOpacity, Platform, TouchableWithoutFeedback } from 'react-native';
+import {Image, Platform, TouchableWithoutFeedback } from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import Icon from './Icon';
@@ -15,6 +14,7 @@ import Thumbnail from './Thumbnail';
 import CheckBox from './Checkbox';
 import Radio from './Radio';
 import InputGroup from './InputGroup';
+import TouchableOpacityScrollable from './TouchableOpacityScrollable';
 import _ from 'lodash';
 
 export default class ListItemNB extends NativeBaseComponent {
@@ -507,7 +507,7 @@ export default class ListItemNB extends NativeBaseComponent {
                 <View style={{
                     backgroundColor : this.isItemPressIn ? '#dddddd' : 'white'
                 }}>
-                    <TouchableOpacity {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1}
+                    <TouchableOpacityScrollable {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1}
                         onPressIn={()=>{
                             this.isItemPressIn = true;
                             this.forceUpdate();
@@ -517,7 +517,7 @@ export default class ListItemNB extends NativeBaseComponent {
                             this.forceUpdate();
                         }}>
                         {this.renderChildren()}
-                    </TouchableOpacity>
+                    </TouchableOpacityScrollable>
                 </View>
             );
         } else if (this.stackedPresent()) {
@@ -528,9 +528,9 @@ export default class ListItemNB extends NativeBaseComponent {
             );
         } else {
             return(
-                <TouchableOpacity {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1} >
+                <TouchableOpacityScrollable {...this.prepareRootProps()} activeOpacity={ (this.props.button) ? 0.2 : 1} >
                     {this.renderChildren()}
-                </TouchableOpacity>
+                </TouchableOpacityScrollable>
             );
         }
     }

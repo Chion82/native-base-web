@@ -1,5 +1,4 @@
-/* Original author: @flow */
-/* Modified by: @Chion82 */
+/* @flow */
 'use strict';
 
 import React from 'react';

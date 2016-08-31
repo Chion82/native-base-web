@@ -1,5 +1,4 @@
-/* Original author: @flow */
-/* Modified by: @Chion82 */
+/* @flow */
 'use strict';
 
 import React from 'react';
@@ -46,20 +45,8 @@ export default class BadgeNB extends NativeBaseComponent {
 
     }
     render() {
-        let viewProps = this.prepareRootProps();
-        if (viewProps.primary)
-            delete viewProps.primary;
-        if (viewProps.success)
-            delete viewProps.success;
-        if (viewProps.info)
-            delete viewProps.info;
-        if (viewProps.warning)
-            delete viewProps.warning;
-        if (viewProps.danger)
-            delete viewProps.danger;
-
         return(
-            <View {...viewProps}>
+            <View {...this.prepareRootProps()}>
                 <Text style={{ color: (this.props.textStyle && this.props.textStyle.color) ? this.props.textStyle.color : this.getTheme().badgeColor,
                                 fontSize: this.getTheme().fontSizeBase,
                                 lineHeight: this.getTheme().lineHeight-1,

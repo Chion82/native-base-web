@@ -34,6 +34,15 @@ import Spinner from './Components/Widgets/Spinner';
 import { Col, Row, Grid } from "./Components/vendor/react-native-easy-grid";
 import ScrollableTabView from './Components/Widgets/Tabs';
 
+//Suppress unknown prop warnings
+const logFunction = console.error;
+console.error = function() {
+    if (arguments[0] && arguments[0].indexOf('Warning: Unknown prop') !== -1) {
+        return;
+    }
+    logFunction.apply(console, arguments);
+}
+
 
 module.exports = {
 	Header: Header,

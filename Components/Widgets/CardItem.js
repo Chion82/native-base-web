@@ -1,5 +1,4 @@
-/* Original author: @flow */
-/* Modified by: @Chion82 */
+/* @flow */
 'use strict';
 
 import React from 'react';
@@ -11,6 +10,7 @@ import Text from './Text';
 import View from './View';
 import Button from './Button';
 import Thumbnail from './Thumbnail';
+import _ from 'lodash';
 
 export default class CardItemNB extends NativeBaseComponent {
 
@@ -290,11 +290,8 @@ export default class CardItemNB extends NativeBaseComponent {
 
 
     render() {
-        let viewProps = this.prepareRootProps();
-        if (viewProps.header)
-            delete viewProps.header;
         return(
-            <View {...viewProps} >
+            <View {...this.prepareRootProps()} >
                 {this.renderChildren()}
             </View>
         );
