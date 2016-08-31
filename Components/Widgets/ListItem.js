@@ -39,7 +39,7 @@ export default class ListItemNB extends NativeBaseComponent {
                 justifyContent: ((this.props.iconRight && !this.props.iconLeft) || (this.props.iconRight && this.props.iconLeft)) ? 'space-between' : 'flex-start',
                 flexDirection: this.stackedPresent() ? 'column' : 'row',
                 alignItems: 'center',
-                borderColor: (this.inputPresent() && !this.inlinePresent() ) ? 'transparent' : this.getTheme().listBorderColor
+                borderColor: this.props.hideBorder ? 'transparent' : ((this.inputPresent() && !this.inlinePresent() ) ? 'transparent' : this.getTheme().listBorderColor)
             },
             listItemDivider: {
                 borderBottomWidth: this.getTheme().borderWidth,

@@ -16,7 +16,16 @@ export default class Container extends NativeBaseComponent {
 	propTypes: {
         style : React.PropTypes.object
     }
-	
+
+    isHeaderPresent() {
+        let headerPresent = false;
+        React.Children.forEach(this.props.children, function (child) {
+            if(child.type == Header)
+                headerPresent = true;
+        })
+        return headerPresent;
+    }
+
 	renderHeader() {
 		if(Array.isArray(this.props.children)) {
 			return _.find(this.props.children, function(item) {
@@ -85,7 +94,10 @@ export default class Container extends NativeBaseComponent {
 			</View>
 
 
-			<View style={{flex:1}}>
+			<View style={{
+                flex:1,
+                paddingTop : this.isHeaderPresent() ? this.getTheme().toolbarHeight : 0
+            }}>
 			{this.renderContent()}
 			</View>
 

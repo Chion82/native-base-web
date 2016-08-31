@@ -35,7 +35,10 @@ export default class Header extends NativeBaseComponent {
                 //shadowRadius: 1.5,
                 height: this.getTheme().toolbarHeight,
                 //elevation: 3,
-                position: 'relative'
+                position: 'fixed',
+                top : 0,
+                width : '100%',
+                zIndex : 99
             },
             iosToolbarSearch: {
                 backgroundColor: this.getTheme().toolbarInputColor,
