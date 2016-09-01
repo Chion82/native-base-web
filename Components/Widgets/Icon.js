@@ -4,10 +4,13 @@
 import React from 'react';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
+import TabBarItem from './TabBarItem';
 
 import variables from '../Themes/light';
 
 export default class IconNB extends NativeBaseComponent {
+
+    static TabBarItem = TabBarItem;
 
     setIconFamily(family) {
         switch(family) {
