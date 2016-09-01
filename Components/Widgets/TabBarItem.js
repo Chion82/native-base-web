@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { TabBarIOS } from 'react-native';
+import { TabBarIOS } from 'react-native-web-extended';
 import Icon from './Icon';
 
 class TabBarItem extends Component {

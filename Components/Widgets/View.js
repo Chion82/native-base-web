@@ -3,7 +3,7 @@
 
 import React from 'react';
 import _ from 'lodash';
-import {View} from 'react-native';
+import {View} from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 
 

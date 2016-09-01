@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import { TouchableOpacity, Platform } from 'react-native';
+import { TouchableOpacity, Platform } from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import IconNB from './Icon';

@@ -4,7 +4,7 @@
 import React from 'react';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
-import { ScrollView } from 'react-native';
+import { ScrollView } from 'react-native-web-extended';
 
 export default class Content extends NativeBaseComponent {
 

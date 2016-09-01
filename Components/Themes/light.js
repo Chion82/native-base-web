@@ -1,6 +1,6 @@
 import Color from 'color';
 
-import {Platform} from 'react-native';
+import {Platform} from 'react-native-web-extended';
 
 export default function() {
     return {

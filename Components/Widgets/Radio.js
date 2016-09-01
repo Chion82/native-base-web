@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {View, Platform} from 'react-native';
+import {View, Platform} from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import Icon from './Icon';
 

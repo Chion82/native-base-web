@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   PanResponder,
   Animated,
-} from 'react-native';
+} from 'react-native-web-extended';
 
 import DefaultTabBar from './DefaultTabBar';
 var deviceWidth = Dimensions.get('window').width;

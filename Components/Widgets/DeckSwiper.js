@@ -3,7 +3,7 @@
 
 import React from 'react';
 import clamp from 'clamp';
-import {Animated, PanResponder} from 'react-native';
+import {Animated, PanResponder} from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import View from './View';
 

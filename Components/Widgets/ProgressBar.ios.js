@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import { ProgressViewIOS} from 'react-native';
+import { ProgressViewIOS} from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 // import computeProps from '../../Utils/computeProps';
 

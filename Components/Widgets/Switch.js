@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {Switch} from 'react-native';
+import {Switch} from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 

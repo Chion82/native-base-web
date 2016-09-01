@@ -2,7 +2,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, } from 'react-native';
+import {View, } from 'react-native-web-extended';
 
 import computeProps from '../Utils/computeProps';
 import _ from 'lodash';

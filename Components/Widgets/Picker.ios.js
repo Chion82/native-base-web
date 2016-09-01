@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {Picker, Modal} from 'react-native';
+import {Picker, Modal} from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import View from './View';

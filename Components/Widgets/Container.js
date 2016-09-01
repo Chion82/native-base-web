@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image} from 'react-native-web-extended';
 import ViewNB from './View';
 import Header from './Header';
 import Content from './Content';

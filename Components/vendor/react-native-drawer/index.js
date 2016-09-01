@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
   Dimensions
-} from 'react-native'
+} from 'react-native-web-extended'
 import tween from './tweener'
 
 let deviceScreen = Dimensions.get('window')

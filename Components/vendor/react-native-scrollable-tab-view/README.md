@@ -60,7 +60,7 @@ Below is the default tab bar, renamed to CustomTabBar, you can use this
 as a template for implementing your own.
 
 ```javascript
-var React = require('react-native');
+var React = require('react-native-web-extended');
 var {
   StyleSheet,
   Text,
