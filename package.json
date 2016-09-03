@@ -38,7 +38,7 @@
     "eslint": "^2.9.0",
     "eslint-plugin-react": "^5.0.1",
     "react": "^15.1.0",
-    "react-native-web-extended": "0.0.1"
+    "react-native-web-extended": "0.0.3"
   },
   "rnpm": {
     "assets": [
