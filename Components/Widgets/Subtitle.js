@@ -2,9 +2,9 @@
 'use strict';
 
 import React from 'react';
-import {Text, View, Platform } from 'react-native-web-extended';
+import {Text, View } from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
-
+import Platform from '../../Utils/platform';
 
 export default class Subtitle extends NativeBaseComponent {
 

@@ -13,8 +13,8 @@ exports.default = function () {
         brandWarning: '#f0ad4e',
         brandSidebar: '#252932',
 
-        fontFamily: _reactNativeWebExtended.Platform.OS === 'ios' ? 'HelveticaNeue' : 'inherit',
-        btnFontFamily: _reactNativeWebExtended.Platform.OS === 'ios' ? 'HelveticaNeue' : 'inherit',
+        fontFamily: _platform2.default.OS === 'ios' ? 'HelveticaNeue' : 'inherit',
+        btnFontFamily: _platform2.default.OS === 'ios' ? 'HelveticaNeue' : 'inherit',
         iconFamily: 'Ionicons',
 
         inverseTextColor: '#fff',
@@ -23,8 +23,8 @@ exports.default = function () {
         subtitleColor: '#8e8e93',
 
         fontSizeBase: 15,
-        titleFontSize: _reactNativeWebExtended.Platform.OS === 'ios' ? 17 : 19,
-        subTitleFontSize: _reactNativeWebExtended.Platform.OS === 'ios' ? 12 : 14,
+        titleFontSize: _platform2.default.OS === 'ios' ? 17 : 19,
+        subTitleFontSize: _platform2.default.OS === 'ios' ? 12 : 14,
 
         inputFontSize: 15,
         inputLineHeight: 24,
@@ -39,7 +39,7 @@ exports.default = function () {
             return this.fontSizeBase * 1.4;
         },
         get btnTextSize() {
-            return _reactNativeWebExtended.Platform.OS === 'ios' ? this.fontSizeBase * 1.1 : this.fontSizeBase - 1;
+            return _platform2.default.OS === 'ios' ? this.fontSizeBase * 1.1 : this.fontSizeBase - 1;
         },
         get btnTextSizeLarge() {
             return this.fontSizeBase * 1.5;
@@ -56,20 +56,20 @@ exports.default = function () {
 
         buttonPadding: 6,
 
-        borderRadiusBase: _reactNativeWebExtended.Platform.OS === 'ios' ? 5 : 2,
+        borderRadiusBase: _platform2.default.OS === 'ios' ? 5 : 2,
 
         get borderRadiusLarge() {
             return this.fontSizeBase * 3.8;
         },
 
         footerHeight: 55,
-        toolbarHeight: _reactNativeWebExtended.Platform.OS === 'ios' ? 50 : 56,
-        toolbarDefaultBg: _reactNativeWebExtended.Platform.OS === 'ios' ? '#F8F8F8' : '#039BE5',
+        toolbarHeight: _platform2.default.OS === 'ios' ? 50 : 56,
+        toolbarDefaultBg: _platform2.default.OS === 'ios' ? '#F8F8F8' : '#039BE5',
         toolbarInverseBg: '#222',
 
         iosToolbarBtnColor: '#007aff',
 
-        toolbarTextColor: _reactNativeWebExtended.Platform.OS === 'ios' ? '#000' : '#fff',
+        toolbarTextColor: _platform2.default.OS === 'ios' ? '#000' : '#fff',
 
         checkboxBgColor: '#039BE5',
         checkboxTickColor: '#fff',
@@ -81,7 +81,7 @@ exports.default = function () {
             return (0, _color2.default)(this.radioColor).darken(0.2).hexString();
         },
 
-        radioBtnSize: _reactNativeWebExtended.Platform.OS === 'ios' ? 25 : 23,
+        radioBtnSize: _platform2.default.OS === 'ios' ? 25 : 23,
 
         tabBgColor: '#F8F8F8',
         tabFontSize: 15,
@@ -161,15 +161,15 @@ exports.default = function () {
         listNoteColor: '#808080',
         listNoteSize: 13,
 
-        iconFontSize: _reactNativeWebExtended.Platform.OS === 'ios' ? 30 : 28,
+        iconFontSize: _platform2.default.OS === 'ios' ? 30 : 28,
 
         badgeColor: '#fff',
         badgeBg: '#ED1727',
 
-        lineHeight: _reactNativeWebExtended.Platform.OS === 'ios' ? 20 : 24,
-        iconLineHeight: _reactNativeWebExtended.Platform.OS === 'ios' ? 37 : 30,
+        lineHeight: _platform2.default.OS === 'ios' ? 20 : 24,
+        iconLineHeight: _platform2.default.OS === 'ios' ? 37 : 30,
 
-        toolbarIconSize: _reactNativeWebExtended.Platform.OS === 'ios' ? 20 : 22,
+        toolbarIconSize: _platform2.default.OS === 'ios' ? 20 : 22,
 
         toolbarInputColor: '#CECDD2',
 
@@ -185,6 +185,8 @@ var _color = require('color');
 
 var _color2 = _interopRequireDefault(_color);
 
-var _reactNativeWebExtended = require('react-native-web-extended');
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -14,6 +14,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactNativeWebExtended = require('react-native-web-extended');
 
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
+
 var _NativeBaseComponent2 = require('../Base/NativeBaseComponent');
 
 var _NativeBaseComponent3 = _interopRequireDefault(_NativeBaseComponent2);
@@ -118,7 +122,7 @@ var ListItemNB = function (_NativeBaseComponent) {
                 itemIcon: {
                     fontSize: this.getTheme().iconFontSize,
                     color: this.getContextForegroundColor(),
-                    lineHeight: _reactNativeWebExtended.Platform.OS === 'ios' ? 34 : undefined
+                    lineHeight: _platform2.default.OS === 'ios' ? 34 : undefined
                 },
                 itemNote: {
                     fontSize: this.getTheme().listNoteSize,

@@ -2,7 +2,8 @@
 'use strict';
 
 import React from 'react';
-import {Image, Platform, TouchableWithoutFeedback } from 'react-native-web-extended';
+import {Image, TouchableWithoutFeedback } from 'react-native-web-extended';
+import Platform from '../../Utils/platform';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import Icon from './Icon';

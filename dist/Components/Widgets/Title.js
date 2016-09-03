@@ -10,7 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactNativeWebExtended = require('react-native-web-extended');
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
 
 var _NativeBaseComponent2 = require('../Base/NativeBaseComponent');
 
@@ -53,8 +55,8 @@ var Title = function (_NativeBaseComponent) {
 				color: this.getTheme().toolbarTextColor,
 				fontSize: this.getTheme().titleFontSize,
 				fontFamily: this.getTheme().btnFontFamily,
-				fontWeight: _reactNativeWebExtended.Platform.OS === 'ios' ? '500' : undefined,
-				alignSelf: _reactNativeWebExtended.Platform.OS === 'ios' ? 'center' : 'flex-start'
+				fontWeight: _platform2.default.OS === 'ios' ? '500' : undefined,
+				alignSelf: _platform2.default.OS === 'ios' ? 'center' : 'flex-start'
 			};
 
 			var defaultProps = {

@@ -20,6 +20,10 @@ var _Icon = require('./Icon');
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50,7 +54,7 @@ var Radio = function (_NativeBaseComponent) {
             return _react2.default.createElement(
                 _reactNativeWebExtended.View,
                 null,
-                _reactNativeWebExtended.Platform.OS === 'ios' ? _react2.default.createElement(_Icon2.default, { name: this.props.selected ? 'md-radio-button-on' : 'md-radio-button-off', style: { color: this.props.selected ? this.getTheme().radioSelectedColor : this.getTheme().radioColor, lineHeight: this.getTheme().radioBtnSize + 4, fontSize: this.getTheme().radioBtnSize } }) : _react2.default.createElement(_Icon2.default, { name: this.props.selected ? 'md-radio-button-on' : 'md-radio-button-off', style: { color: this.props.selected ? this.getTheme().radioSelectedColor : this.getTheme().radioColor, lineHeight: this.getTheme().radioBtnSize + 1, fontSize: this.getTheme().radioBtnSize } })
+                _platform2.default.OS === 'ios' ? _react2.default.createElement(_Icon2.default, { name: this.props.selected ? 'md-radio-button-on' : 'md-radio-button-off', style: { color: this.props.selected ? this.getTheme().radioSelectedColor : this.getTheme().radioColor, lineHeight: this.getTheme().radioBtnSize + 4, fontSize: this.getTheme().radioBtnSize } }) : _react2.default.createElement(_Icon2.default, { name: this.props.selected ? 'md-radio-button-on' : 'md-radio-button-off', style: { color: this.props.selected ? this.getTheme().radioSelectedColor : this.getTheme().radioColor, lineHeight: this.getTheme().radioBtnSize + 1, fontSize: this.getTheme().radioBtnSize } })
             );
         }
     }]);

@@ -126,12 +126,16 @@ var _TouchableOpacityScrollable = require('./Components/Widgets/TouchableOpacity
 
 var _TouchableOpacityScrollable2 = _interopRequireDefault(_TouchableOpacityScrollable);
 
+var _platform = require('./Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //Suppress unknown prop warnings
-var logFunction = console.error;
-// import ProgressBar from './Components/Widgets/ProgressBar';
 
+// import ProgressBar from './Components/Widgets/ProgressBar';
+var logFunction = console.error;
 console.error = function () {
 				if (arguments[0] && arguments[0].indexOf('Warning: Unknown prop') !== -1) {
 								return;
@@ -174,5 +178,7 @@ module.exports = {
 				// ProgressBar: ProgressBar,
 				Drawer: _reactNativeDrawer2.default,
 				Tabs: _Tabs2.default,
-				TouchableOpacityScrollable: _TouchableOpacityScrollable2.default
+				TouchableOpacityScrollable: _TouchableOpacityScrollable2.default,
+				//Utils
+				OSTheme: _platform2.default
 };

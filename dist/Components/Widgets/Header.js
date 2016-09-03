@@ -10,7 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactNativeWebExtended = require('react-native-web-extended');
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
 
 var _NativeBaseComponent2 = require('../Base/NativeBaseComponent');
 
@@ -71,7 +73,7 @@ var Header = function (_NativeBaseComponent) {
                     flexDirection: 'row',
                     alignItems: 'center',
                     paddingHorizontal: 15,
-                    paddingTop: _reactNativeWebExtended.Platform.OS === 'ios' ? 0 : 0,
+                    paddingTop: _platform2.default.OS === 'ios' ? 0 : 0,
                     //shadowColor: '#000',
                     //shadowOffset: {width: 0, height: 2},
                     //shadowOpacity: 0.1,
@@ -150,7 +152,7 @@ var Header = function (_NativeBaseComponent) {
                 });
 
                 if (this.props.searchBar) {
-                    if (_reactNativeWebExtended.Platform.OS === 'ios') {
+                    if (_platform2.default.OS === 'ios') {
                         newChildren.push(_react2.default.createElement(
                             _View2.default,
                             { key: 'search', style: { flex: 1, alignSelf: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginLeft: -7 } },
@@ -169,7 +171,7 @@ var Header = function (_NativeBaseComponent) {
                         ));
                     }
                 } else {
-                    if (_reactNativeWebExtended.Platform.OS === 'ios') {
+                    if (_platform2.default.OS === 'ios') {
                         newChildren.push(_react2.default.createElement(
                             _View2.default,
                             { key: 'title', style: { position: 'absolute', left: 0, right: 0, top: 2, bottom: 0, alignSelf: 'center', justifyContent: 'center' } },

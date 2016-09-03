@@ -12,6 +12,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactNativeWebExtended = require('react-native-web-extended');
 
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
+
 var _NativeBaseComponent2 = require('../Base/NativeBaseComponent');
 
 var _NativeBaseComponent3 = _interopRequireDefault(_NativeBaseComponent2);
@@ -136,7 +140,7 @@ var Button = function (_NativeBaseComponent) {
                 return _react2.default.createElement(
                     _Text2.default,
                     { style: this.getTextStyle() },
-                    _reactNativeWebExtended.Platform.OS === 'ios' ? this.props.children : this.props.children.toUpperCase()
+                    _platform2.default.OS === 'ios' ? this.props.children : this.props.children.toUpperCase()
                 );
             } else if (this.props.children.type == _Icon2.default) {
                 return _react2.default.cloneElement(this.props.children, this.getIconProps(this.props.children));
@@ -155,7 +159,7 @@ var Button = function (_NativeBaseComponent) {
                     newChildren.push(_react2.default.createElement(
                         _Text2.default,
                         { key: 'label', style: this.getTextStyle() },
-                        _reactNativeWebExtended.Platform.OS === 'ios' ? childrenArray[0] : childrenArray[0].toUpperCase()
+                        _platform2.default.OS === 'ios' ? childrenArray[0] : childrenArray[0].toUpperCase()
                     ));
                     newChildren.push(_react2.default.createElement(
                         _Text2.default,
@@ -171,7 +175,7 @@ var Button = function (_NativeBaseComponent) {
                     newChildren.push(_react2.default.createElement(
                         _Text2.default,
                         { key: 'label', style: this.getTextStyle() },
-                        _reactNativeWebExtended.Platform.OS === 'ios' ? childrenArray[0] : childrenArray[0].toUpperCase()
+                        _platform2.default.OS === 'ios' ? childrenArray[0] : childrenArray[0].toUpperCase()
                     ));
                 }
 

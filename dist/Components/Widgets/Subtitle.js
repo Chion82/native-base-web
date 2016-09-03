@@ -16,6 +16,10 @@ var _NativeBaseComponent2 = require('../Base/NativeBaseComponent');
 
 var _NativeBaseComponent3 = _interopRequireDefault(_NativeBaseComponent2);
 
+var _platform = require('../../Utils/platform');
+
+var _platform2 = _interopRequireDefault(_platform);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41,7 +45,7 @@ var Subtitle = function (_NativeBaseComponent) {
 				null,
 				_react2.default.createElement(
 					_reactNativeWebExtended.Text,
-					{ style: { color: this.getTheme().subtitleColor, fontSize: this.getTheme().subTitleFontSize, alignSelf: _reactNativeWebExtended.Platform.OS === 'ios' ? 'center' : 'flex-start' } },
+					{ style: { color: this.getTheme().subtitleColor, fontSize: this.getTheme().subTitleFontSize, alignSelf: _platform2.default.OS === 'ios' ? 'center' : 'flex-start' } },
 					this.props.children
 				)
 			);

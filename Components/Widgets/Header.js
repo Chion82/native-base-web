@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import { Platform} from 'react-native-web-extended';
+import Platform from '../../Utils/platform';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import Button from './Button';
