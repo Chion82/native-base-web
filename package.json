@@ -1,6 +1,7 @@
 {
   "name": "native-base-web",
   "description": "NativeBase for react-native-web",
+  "author": "Chion82",
   "keywords": [
     "android",
     "ios",
