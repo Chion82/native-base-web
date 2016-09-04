@@ -47,7 +47,7 @@ var NativeBaseComponent = function (_Component) {
 	}, {
 		key: 'getTheme',
 		value: function getTheme() {
-			var theme = this.props.theme ? this.props.theme() : this.context.theme || _light2.default;
+			var theme = this.props.theme ? this.props.theme : this.context.theme || _light2.default;
 			if (typeof theme == 'function') {
 				return theme();
 			} else {
