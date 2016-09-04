@@ -33,7 +33,7 @@ export default class NativeBaseComponent extends Component {
 	}
 
 	getTheme() {
-		let theme = this.props.theme ? this.props.theme() :
+		let theme = this.props.theme ? this.props.theme :
 		      this.context.theme || lightTheme;
         if (typeof theme == 'function') {
             return theme();
