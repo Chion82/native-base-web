@@ -39,10 +39,12 @@ import Platform from './Utils/platform';
 //Suppress unknown prop warnings
 const logFunction = console.error;
 console.error = function() {
-    if (arguments[0] && arguments[0].indexOf('Warning: Unknown prop') !== -1) {
-        return;
-    }
-    logFunction.apply(console, arguments);
+  if (arguments[0]) {
+    const errorMessage = '' + arguments[0];
+    if (errorMessage.indexOf('Warning: Unknown prop') !== -1)
+      return;
+  }
+  logFunction.apply(console, arguments);
 }
 
 

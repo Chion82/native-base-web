@@ -137,48 +137,49 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import ProgressBar from './Components/Widgets/ProgressBar';
 var logFunction = console.error;
 console.error = function () {
-				if (arguments[0] && arguments[0].indexOf('Warning: Unknown prop') !== -1) {
-								return;
-				}
-				logFunction.apply(console, arguments);
+		if (arguments[0]) {
+				var errorMessage = '' + arguments[0];
+				if (errorMessage.indexOf('Warning: Unknown prop') !== -1) return;
+		}
+		logFunction.apply(console, arguments);
 };
 
 module.exports = {
-				Header: _Header2.default,
-				Footer: _Footer2.default,
-				Title: _Title2.default,
-				Container: _Container2.default,
-				Content: _Content2.default,
-				Button: _Button2.default,
-				Text: _Text2.default,
-				Switch: _Switch2.default,
-				Picker: _Picker2.default,
-				List: _List2.default,
-				ListItem: _ListItem2.default,
-				CardItem: _CardItem2.default,
-				H1: _H2.default,
-				H2: _H4.default,
-				H3: _H6.default,
-				View: _View2.default,
-				Row: _reactNativeEasyGrid.Row,
-				Col: _reactNativeEasyGrid.Col,
-				Grid: _reactNativeEasyGrid.Grid,
-				InputGroup: _InputGroup2.default,
-				Input: _Input2.default,
-				Textarea: _Textarea2.default,
-				Icon: _Icon2.default,
-				Thumbnail: _Thumbnail2.default,
-				Card: _Card2.default,
-				CardSwiper: _CardSwiper2.default,
-				DeckSwiper: _DeckSwiper2.default,
-				Badge: _Badge2.default,
-				Spinner: _Spinner2.default,
-				CheckBox: _Checkbox2.default,
-				Radio: _Radio2.default,
-				// ProgressBar: ProgressBar,
-				Drawer: _reactNativeDrawer2.default,
-				Tabs: _Tabs2.default,
-				TouchableOpacityScrollable: _TouchableOpacityScrollable2.default,
-				//Utils
-				OSTheme: _platform2.default
+		Header: _Header2.default,
+		Footer: _Footer2.default,
+		Title: _Title2.default,
+		Container: _Container2.default,
+		Content: _Content2.default,
+		Button: _Button2.default,
+		Text: _Text2.default,
+		Switch: _Switch2.default,
+		Picker: _Picker2.default,
+		List: _List2.default,
+		ListItem: _ListItem2.default,
+		CardItem: _CardItem2.default,
+		H1: _H2.default,
+		H2: _H4.default,
+		H3: _H6.default,
+		View: _View2.default,
+		Row: _reactNativeEasyGrid.Row,
+		Col: _reactNativeEasyGrid.Col,
+		Grid: _reactNativeEasyGrid.Grid,
+		InputGroup: _InputGroup2.default,
+		Input: _Input2.default,
+		Textarea: _Textarea2.default,
+		Icon: _Icon2.default,
+		Thumbnail: _Thumbnail2.default,
+		Card: _Card2.default,
+		CardSwiper: _CardSwiper2.default,
+		DeckSwiper: _DeckSwiper2.default,
+		Badge: _Badge2.default,
+		Spinner: _Spinner2.default,
+		CheckBox: _Checkbox2.default,
+		Radio: _Radio2.default,
+		// ProgressBar: ProgressBar,
+		Drawer: _reactNativeDrawer2.default,
+		Tabs: _Tabs2.default,
+		TouchableOpacityScrollable: _TouchableOpacityScrollable2.default,
+		//Utils
+		OSTheme: _platform2.default
 };
