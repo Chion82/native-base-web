@@ -47,8 +47,6 @@
     ]
   },
   "main": "dist/index.js",
-  "readme": "NativeBase for react-native-web",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/Chion82/native-base-web.git"
