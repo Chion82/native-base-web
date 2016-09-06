@@ -146,7 +146,7 @@ export default class Button extends NativeBaseComponent {
     }
     renderChildren() {
         if(typeof this.props.children == 'string') {
-            return <Text style={this.getTextStyle()}>{(Platform.OS==='ios') ? this.props.children : this.props.children.toUpperCase()}</Text>
+            return <Text style={{...this.getTextStyle(), width:'100%', textAlign:'center'}}>{(Platform.OS==='ios') ? this.props.children : this.props.children.toUpperCase()}</Text>
         }
 
         else if(this.props.children.type == IconNB) {
