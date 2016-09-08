@@ -1,8 +1,10 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -49,113 +51,136 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Container = function (_NativeBaseComponent) {
-	_inherits(Container, _NativeBaseComponent);
+  _inherits(Container, _NativeBaseComponent);
 
-	function Container() {
-		_classCallCheck(this, Container);
+  function Container() {
+    _classCallCheck(this, Container);
 
-		return _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).apply(this, arguments));
-	}
+    return _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).apply(this, arguments));
+  }
 
-	_createClass(Container, [{
-		key: 'isHeaderPresent',
-		value: function isHeaderPresent() {
-			var headerPresent = false;
-			_react2.default.Children.forEach(this.props.children, function (child) {
-				if (child.type == _Header2.default) headerPresent = true;
-			});
-			return headerPresent;
-		}
-	}, {
-		key: 'renderHeader',
-		value: function renderHeader() {
-			if (Array.isArray(this.props.children)) {
-				return _lodash2.default.find(this.props.children, function (item) {
-					if (item && item.type == _Header2.default) {
-						return true;
-					}
-				});
-			} else {
-				if (this.props.children && this.props.children.type == _Header2.default) {
-					return this.props.children;
-				}
-			}
-		}
-	}, {
-		key: 'renderContent',
-		value: function renderContent() {
-			if (Array.isArray(this.props.children)) {
+  _createClass(Container, [{
+    key: 'isHeaderPresent',
+    value: function isHeaderPresent() {
+      var headerPresent = false;
+      _react2.default.Children.forEach(this.props.children, function (child) {
+        if (child.type == _Header2.default) headerPresent = true;
+      });
+      return headerPresent;
+    }
+  }, {
+    key: 'renderHeader',
+    value: function renderHeader() {
+      if (Array.isArray(this.props.children)) {
+        return _lodash2.default.find(this.props.children, function (item) {
+          if (item && item.type == _Header2.default) {
+            return true;
+          }
+        });
+      } else {
+        if (this.props.children && this.props.children.type == _Header2.default) {
+          return this.props.children;
+        }
+      }
+    }
+  }, {
+    key: 'getBottomTabBarHeight',
+    value: function getBottomTabBarHeight() {
+      var tabBars = document.getElementsByClassName('tabbarios-tabbar-container');
+      if (tabBars.length === 0) {
+        return 0;
+      }
+      var tabBar = tabBars[0];
+      if (!(tabBar.clientWidth !== 0 && tabBar.clientHeight !== 0 && tabBar.style.opacity !== 0 && tabBar.style.visibility !== 'hidden')) {
+        return 0;
+      }
+      return tabBars[0].clientHeight;
+    }
+  }, {
+    key: 'renderContent',
+    value: function renderContent() {
+      var contentNode = null;
+      var defaultContentStyle = {
+        height: _reactNativeWebExtended.Dimensions.get('window').height - (this.isHeaderPresent() ? this.getTheme().toolbarHeight : 0) - this.getBottomTabBarHeight()
+      };
 
-				return _lodash2.default.find(this.props.children, function (item) {
-					if (item && (item.type == _View2.default || item.type == _Content2.default || item.type == _reactNativeWebExtended.Image || item.type == _reactNativeWebExtended.View)) {
+      if (Array.isArray(this.props.children)) {
 
-						return true;
-					}
-				});
-			} else {
-				if (this.props.children && (this.props.children.type == _Content2.default || this.props.children.type == _View2.default || this.props.children.type == _reactNativeWebExtended.View || this.props.children.type == _reactNativeWebExtended.Image)) {
-					return this.props.children;
-				}
-			}
-		}
-	}, {
-		key: 'renderFooter',
-		value: function renderFooter() {
-			if (Array.isArray(this.props.children)) {
-				return _lodash2.default.find(this.props.children, function (item) {
-					if (item && item.type == _Footer2.default) {
-						return true;
-					}
-				});
-			} else {
-				if (this.props.children && this.props.children.type == _Footer2.default) {
-					return this.props.children;
-				}
-			}
-		}
-	}, {
-		key: 'prepareRootProps',
-		value: function prepareRootProps() {
+        contentNode = _lodash2.default.find(this.props.children, function (item) {
+          if (item && (item.type == _View2.default || item.type == _Content2.default || item.type == _reactNativeWebExtended.Image || item.type == _reactNativeWebExtended.View)) {
 
-			var type = {
-				flex: 1
-			};
+            return true;
+          }
+        });
+      } else {
+        if (this.props.children && (this.props.children.type == _Content2.default || this.props.children.type == _View2.default || this.props.children.type == _reactNativeWebExtended.View || this.props.children.type == _reactNativeWebExtended.Image)) {
+          contentNode = this.props.children;
+        }
+      }
+      return _react2.default.createElement(
+        contentNode.type,
+        _extends({}, contentNode.props, { style: _lodash2.default.assign(defaultContentStyle, contentNode.props.style || {}) }),
+        contentNode.props.children
+      );
+    }
+  }, {
+    key: 'renderFooter',
+    value: function renderFooter() {
+      if (Array.isArray(this.props.children)) {
+        return _lodash2.default.find(this.props.children, function (item) {
+          if (item && item.type == _Footer2.default) {
+            return true;
+          }
+        });
+      } else {
+        if (this.props.children && this.props.children.type == _Footer2.default) {
+          return this.props.children;
+        }
+      }
+    }
+  }, {
+    key: 'prepareRootProps',
+    value: function prepareRootProps() {
 
-			var defaultProps = {
-				style: type
-			};
+      var type = {
+        flex: 1
+      };
 
-			return (0, _computeProps2.default)(this.props, defaultProps);
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				_reactNativeWebExtended.View,
-				this.prepareRootProps(),
-				_react2.default.createElement(
-					_reactNativeWebExtended.View,
-					null,
-					this.renderHeader()
-				),
-				_react2.default.createElement(
-					_reactNativeWebExtended.View,
-					{ style: {
-							flex: 1,
-							paddingTop: this.isHeaderPresent() ? this.getTheme().toolbarHeight : 0
-						} },
-					this.renderContent()
-				),
-				_react2.default.createElement(
-					_reactNativeWebExtended.View,
-					null,
-					this.renderFooter()
-				)
-			);
-		}
-	}]);
+      var defaultProps = {
+        style: type
+      };
 
-	return Container;
+      return (0, _computeProps2.default)(this.props, defaultProps);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _reactNativeWebExtended.View,
+        this.prepareRootProps(),
+        _react2.default.createElement(
+          _reactNativeWebExtended.View,
+          null,
+          this.renderHeader()
+        ),
+        _react2.default.createElement(
+          _reactNativeWebExtended.View,
+          { style: {
+              flex: 1,
+              paddingTop: this.isHeaderPresent() ? this.getTheme().toolbarHeight : 0
+            } },
+          this.renderContent()
+        ),
+        _react2.default.createElement(
+          _reactNativeWebExtended.View,
+          null,
+          this.renderFooter()
+        )
+      );
+    }
+  }]);
+
+  return Container;
 }(_NativeBaseComponent3.default);
 
 exports.default = Container;
