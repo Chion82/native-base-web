@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 var Platform = {
-	OS: 'android',
+	OS: 'ios',
 	setOSTheme: function setOSTheme(os) {
 		return Platform.OS = os;
 	}

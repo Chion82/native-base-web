@@ -86,8 +86,16 @@ var Container = function (_NativeBaseComponent) {
   }, {
     key: 'getBottomTabBarHeight',
     value: function getBottomTabBarHeight() {
+      var _this2 = this;
+
       var tabBars = document.getElementsByClassName('tabbarios-tabbar-container');
       if (tabBars.length === 0) {
+        if (!this.autoRerendered) {
+          this.autoRerendered = true;
+          setTimeout(function () {
+            return _this2.forceUpdate();
+          }.bind(this));
+        }
         return 0;
       }
       var tabBar = tabBars[0];

@@ -571,7 +571,7 @@ var ListItemNB = function (_NativeBaseComponent) {
                 return _react2.default.createElement(
                     _View2.default,
                     { style: {
-                            backgroundColor: this.isItemPressIn ? '#dddddd' : 'white'
+                            backgroundColor: this.isItemPressIn ? '#eee' : 'white'
                         } },
                     _react2.default.createElement(
                         _TouchableOpacityScrollable2.default,
