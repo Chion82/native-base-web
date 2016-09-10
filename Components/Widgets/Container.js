@@ -45,10 +45,6 @@ export default class Container extends NativeBaseComponent {
   getBottomTabBarHeight() {
     const tabBars = document.getElementsByClassName('tabbarios-tabbar-container');
     if (tabBars.length === 0) {
-      if (!this.autoRerendered) {
-        this.autoRerendered = true;
-        setTimeout((() => this.forceUpdate()).bind(this));
-      }
       return 0;
     }
     const tabBar = tabBars[0];
@@ -113,6 +109,11 @@ export default class Container extends NativeBaseComponent {
     return computeProps(this.props, defaultProps);
   }
   render() {
+    if (!this.delayRerendered) {
+      this.delayRerendered = true;
+      setTimeout((() => this.forceUpdate()).bind(this));
+      return (<View />);
+    }
     return(
       <View {...this.prepareRootProps()}>
 
