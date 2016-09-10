@@ -1,5 +1,5 @@
 const Platform = {
-	OS : 'android',
+	OS : 'ios',
 	setOSTheme : (os) => Platform.OS = os
 }
 
