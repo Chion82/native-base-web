@@ -12,6 +12,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactNativeWebExtended = require('react-native-web-extended');
+
 var _NativeBaseComponent2 = require('../Base/NativeBaseComponent');
 
 var _NativeBaseComponent3 = _interopRequireDefault(_NativeBaseComponent2);
@@ -78,7 +80,7 @@ var TabNB = function (_NativeBaseComponent) {
                 var style = _lodash2.default.clone(child.props.style || {});
                 if (props.style) delete props.style;
 
-                style.width = Math.round(100 / this.props.children.length) + '%';
+                style.width = _reactNativeWebExtended.Dimensions.get('window').width;
 
                 children.push(_react2.default.createElement(
                     ChildType,

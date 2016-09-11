@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import { Dimensions } from 'react-native-web-extended';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import ScrollableTabView from './../vendor/react-native-scrollable-tab-view';
@@ -41,7 +42,7 @@ export default class TabNB extends NativeBaseComponent {
             if (props.style)
                 delete props.style;
 
-            style.width = Math.round(100/this.props.children.length) + '%';
+            style.width = Dimensions.get('window').width;
 
             children.push(
                 <ChildType {...props} style={style} key={index}>
