@@ -14,7 +14,7 @@
     "packager",
     "rnpm"
   ],
-  "version": "0.0.3-beta.2",
+  "version": "0.0.3-beta.3",
   "private": false,
   "scripts": {
     "build": "rm -rf ./dist && mkdir dist && babel . -d dist --ignore node_modules"
