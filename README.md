@@ -4,8 +4,18 @@ NativeBase for Web
 
 NativeBase-web is a project to bring [NativeBase](http://nativebase.io/) components to the Web, with the help of [react-native-web-extended](https://github.com/Chion82/react-native-web-extended).
 
-Get Started
+Documentation & Demo
+--------------------
+[NativeBase for Web Gitbook](https://chion82.gitbooks.io/nativebase-for-web/content/)
+
+[Live demo here! Browse it on your iPhone6+/Android4.4.4+ devices.](https://blog.chionlab.moe/native-base-web-example/)
+
+Quick Start
 -----------
+It's advised to use [our boilerplate](https://github.com/Chion82/rnweb-native-base-starter) to initialize your app structure.
+
+Manual Setup
+------------
 To install:
 
 ```
@@ -54,4 +64,4 @@ Migrate from NativeBase projects
 --------------------------------
 It is possible to migrate your [NativeBase](http://nativebase.io/) project to a NativeBase-web without changing lots of your code.
 
-TODO
+*WIP*
