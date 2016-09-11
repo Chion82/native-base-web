@@ -4,7 +4,7 @@ NativeBase for Web
 
 NativeBase-web is a project to bring [NativeBase](http://nativebase.io/) components to the Web, with the help of [react-native-web-extended](https://github.com/Chion82/react-native-web-extended).
 
-Documentation & Demo
+Docs & Demo
 --------------------
 [NativeBase for Web Gitbook](https://chion82.gitbooks.io/nativebase-for-web/content/)
 
@@ -41,7 +41,7 @@ resolve: {
 
 Components
 ----------
-Most components from [NativeBase](http://nativebase.io/) are included with same features and parameters. You can read the [NativeBase documentation](http://nativebase.io/docs/v0.5.7/) to use them in NativeBase-web while we are working on our gitbook.
+Most components from [NativeBase](http://nativebase.io/) are included with same features and parameters. Read [the docs](https://chion82.gitbooks.io/nativebase-for-web/content/) for detailed usage.
 
 Working components:  
 * Anatomy  
