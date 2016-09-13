@@ -10,6 +10,12 @@ Docs & Demo
 
 [Live demo here! Browse it on your iPhone6+/Android4.4.4+ devices.](https://blog.chionlab.moe/native-base-web-example/)
 
+Compatibility
+-------------
+Currently supports Safari on iPhone6 or newer with IOS9/10, Android Browser on Android4.4.4 or newer, Chrome/Safari on both mobile and desktop.  
+
+native-base-web(-extended) and native-base-web are both under development, so compatibility and performance problems are expected. We are working on resolving these issues.
+
 Quick Start
 -----------
 It's advised to use [our boilerplate](https://github.com/Chion82/rnweb-native-base-starter) to initialize your app structure.
