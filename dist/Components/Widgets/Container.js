@@ -157,8 +157,9 @@ var Container = function (_NativeBaseComponent) {
     value: function render() {
       var _this2 = this;
 
-      if (!this.delayRerendered) {
-        this.delayRerendered = true;
+      if (!this._delayRerendered) {
+        // Schedule a delayed update to wait for TabBarIOS
+        this._delayRerendered = true;
         setTimeout(function () {
           return _this2.forceUpdate();
         }.bind(this));

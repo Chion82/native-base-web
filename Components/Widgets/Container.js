@@ -109,8 +109,9 @@ export default class Container extends NativeBaseComponent {
     return computeProps(this.props, defaultProps);
   }
   render() {
-    if (!this.delayRerendered) {
-      this.delayRerendered = true;
+    if (!this._delayRerendered) {
+      // Schedule a delayed update to wait for TabBarIOS
+      this._delayRerendered = true;
       setTimeout((() => this.forceUpdate()).bind(this));
       return (<View />);
     }

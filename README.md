@@ -14,7 +14,7 @@ Compatibility
 -------------
 Currently supports Safari on iPhone6 or newer with IOS9/10, Android Browser on Android4.4.4 or newer, Chrome/Safari on both mobile and desktop.  
 
-native-base-web(-extended) and native-base-web are both under development, so compatibility and performance problems are expected. We are working on resolving these issues.
+native-base-web(-extended) and native-base-web are both under development, so compatibility and performance problems may occur. We are working on resolving these issues.
 
 Quick Start
 -----------
@@ -68,6 +68,6 @@ Working components:
 
 Migrate from NativeBase projects
 --------------------------------
-It is possible to migrate your [NativeBase](http://nativebase.io/) project to a NativeBase-web without changing lots of your code.
+It is probable to migrate your [NativeBase](http://nativebase.io/) project to a NativeBase-web without changing lots of your code.
 
 *WIP*
