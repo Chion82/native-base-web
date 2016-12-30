@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {View, TextInput} from 'react-native-web-extended';
+import {View, TextInput} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 

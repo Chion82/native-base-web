@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import { View, Animated } from 'react-native-web-extended';
+import { View, Animated } from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import _ from 'lodash';
 

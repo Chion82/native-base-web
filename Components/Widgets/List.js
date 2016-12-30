@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import {View, ListView} from 'react-native-web-extended';
+import {View, ListView} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import _ from 'lodash';

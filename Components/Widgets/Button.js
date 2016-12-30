@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import { TouchableOpacity } from 'react-native-web-extended';
+import { TouchableOpacity } from 'react-native';
 import Platform from '../../Utils/platform';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
@@ -106,8 +106,8 @@ export default class Button extends NativeBaseComponent {
             fontSize: (this.props.large) ? this.getTheme().btnTextSizeLarge : (this.props.small) ? this.getTheme().btnTextSizeSmall : this.getTheme().btnTextSize,
 
             lineHeight: (this.props.large) ? 29 : (this.props.small) ? 16 : this.getTheme().btnLineHeight,
-            
-            display: 'flex',
+
+            'flex': 1,
             justifyContent: 'center',
             alignItems: 'center'
         }

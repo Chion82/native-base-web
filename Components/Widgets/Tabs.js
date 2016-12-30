@@ -2,7 +2,7 @@
 'use strict';
 
 import React from 'react';
-import { Dimensions } from 'react-native-web-extended';
+import { Dimensions } from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import ScrollableTabView from './../vendor/react-native-scrollable-tab-view';

@@ -14,10 +14,10 @@
     "packager",
     "rnpm"
   ],
-  "version": "0.0.3-beta.3",
+  "version": "0.0.4",
   "private": false,
   "scripts": {
-    "build": "rm -rf ./dist && mkdir dist && babel . -d dist --ignore node_modules"
+    "build": "del ./lib && babel . -d lib --ignore node_modules"
   },
   "dependencies": {
     "clamp": "^1.0.1",
@@ -36,17 +36,18 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-1": "6.5.0",
     "babel-runtime": "6.9.2",
+    "del-cli": "^0.2.1",
     "eslint": "^2.9.0",
     "eslint-plugin-react": "^5.0.1",
     "react": "^15.1.0",
-    "react-native-web-extended": "0.0.3"
+    "react-native-web-extended": "0.0.6"
   },
   "rnpm": {
     "assets": [
       "Fonts"
     ]
   },
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/Chion82/native-base-web.git"

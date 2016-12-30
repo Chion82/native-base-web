@@ -10,7 +10,7 @@ import {
   TouchableHighlight,
   View,
   Animated,
-} from 'react-native-web-extended';
+} from 'react-native';
 
 var deviceWidth = Dimensions.get('window').width;
 
