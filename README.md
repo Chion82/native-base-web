@@ -81,6 +81,6 @@ Working components:
 
 Migrate from NativeBase projects
 --------------------------------
-It is probable to migrate your [NativeBase](http://nativebase.io/) project to a NativeBase-web without changing lots of your code.
+It is probable to migrate your [NativeBase](http://nativebase.io/) project to a native-base-web project without changing lots of your code.
 
 *WIP*
