@@ -102,7 +102,7 @@ PickerNB.Item = React.createClass({
 
     render: function() {
         return(
-          <Picker.Item {...this.props()}/>
+            <Picker.Item {...typeof this.props === "function" ? this.props() : this.props}/>
           );
     }
 });
