@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {View} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import Icon from './Icon';
@@ -13,14 +14,14 @@ import _ from 'lodash';
 export default class InputGroup extends NativeBaseComponent {
 
 	propTypes: {
-        borderType : React.PropTypes.string,
-        toolbar : React.PropTypes.bool,
-        atoolbar : React.PropTypes.bool,
-        iconRight : React.PropTypes.bool,
-        success : React.PropTypes.bool,
-        disabled : React.PropTypes.bool,
-        error : React.PropTypes.bool,
-        style : React.PropTypes.object
+        borderType : PropTypes.string,
+        toolbar : PropTypes.bool,
+        atoolbar : PropTypes.bool,
+        iconRight : PropTypes.bool,
+        success : PropTypes.bool,
+        disabled : PropTypes.bool,
+        error : PropTypes.bool,
+        style : PropTypes.object
     }
 
 	getInitialStyle() {

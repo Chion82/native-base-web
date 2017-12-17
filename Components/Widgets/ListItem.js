@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Image, TouchableWithoutFeedback } from 'react-native';
 import Platform from '../../Utils/platform';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
@@ -21,12 +22,12 @@ import _ from 'lodash';
 export default class ListItemNB extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object,
-        header : React.PropTypes.bool,
-        iconRight : React.PropTypes.bool,
-        iconLeft : React.PropTypes.bool,
-        button : React.PropTypes.bool,
-        itemDivider : React.PropTypes.bool
+        style : PropTypes.object,
+        header : PropTypes.bool,
+        iconRight : PropTypes.bool,
+        iconLeft : PropTypes.bool,
+        button : PropTypes.bool,
+        itemDivider : PropTypes.bool
     }
 
     getInitialStyle() {

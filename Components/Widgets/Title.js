@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Platform from '../../Utils/platform';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import Text from './Text';
@@ -12,7 +13,7 @@ import computeProps from '../../Utils/computeProps';
 export default class Title extends NativeBaseComponent {
 
 	propTypes: {
-        style : React.PropTypes.object
+        style : PropTypes.object
     }
 
 	prepareRootProps() {

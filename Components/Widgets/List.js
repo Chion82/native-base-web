@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {View, ListView} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
@@ -10,9 +11,9 @@ import _ from 'lodash';
 export default class ListNB extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object,
-        dataArray : React.PropTypes.array,
-        renderRow : React.PropTypes.func
+        style : PropTypes.object,
+        dataArray : PropTypes.array,
+        renderRow : PropTypes.func
     }
     
     getInitialStyle() {
