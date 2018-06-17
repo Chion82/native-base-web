@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
 import TabBarItem from './TabBarItem';
@@ -40,7 +41,7 @@ export default class IconNB extends NativeBaseComponent {
     }
 
     propTypes: {
-        style : React.PropTypes.object
+        style : PropTypes.object
     }
 
     getInitialStyle() {

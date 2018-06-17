@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TouchableOpacity } from 'react-native';
 import Platform from '../../Utils/platform';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
@@ -15,21 +16,21 @@ import _ from 'lodash';
 export default class Button extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object,
-        textStyle : React.PropTypes.object,
-        block : React.PropTypes.bool,
-        primary : React.PropTypes.bool,
-        transparent : React.PropTypes.bool,
-        success : React.PropTypes.bool,
-        danger : React.PropTypes.bool,
-        warning : React.PropTypes.bool,
-        info : React.PropTypes.bool,
-        bordered : React.PropTypes.bool,
-        disabled : React.PropTypes.bool,
-        rounded : React.PropTypes.bool,
-        large : React.PropTypes.bool,
-        small : React.PropTypes.bool,
-        inputButton : React.PropTypes.bool
+        style : PropTypes.object,
+        textStyle : PropTypes.object,
+        block : PropTypes.bool,
+        primary : PropTypes.bool,
+        transparent : PropTypes.bool,
+        success : PropTypes.bool,
+        danger : PropTypes.bool,
+        warning : PropTypes.bool,
+        info : PropTypes.bool,
+        bordered : PropTypes.bool,
+        disabled : PropTypes.bool,
+        rounded : PropTypes.bool,
+        large : PropTypes.bool,
+        small : PropTypes.bool,
+        inputButton : PropTypes.bool
     }
 
     getInitialStyle() {

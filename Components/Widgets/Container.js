@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {View, Image, Dimensions} from 'react-native';
 import ViewNB from './View';
 import Header from './Header';
@@ -14,7 +15,7 @@ import computeProps from '../../Utils/computeProps';
 export default class Container extends NativeBaseComponent {
 
   propTypes: {
-    style : React.PropTypes.object
+    style : PropTypes.object
   }
 
   isHeaderPresent() {

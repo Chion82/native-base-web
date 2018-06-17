@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {View} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
@@ -9,8 +10,8 @@ import NativeBaseComponent from '../Base/NativeBaseComponent';
 
 export default class ViewNB extends NativeBaseComponent {
 	propTypes: {
-        style : React.PropTypes.object,
-        padder : React.PropTypes.bool
+        style : PropTypes.object,
+        padder : PropTypes.bool
     }
 	render() {
 		return(

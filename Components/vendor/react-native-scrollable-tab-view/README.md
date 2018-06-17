@@ -61,6 +61,7 @@ as a template for implementing your own.
 
 ```javascript
 var React = require('react-native');
+var PropTypes = require('prop-types');
 var {
   StyleSheet,
   Text,
@@ -94,9 +95,9 @@ var styles = StyleSheet.create({
 
 var CustomTabBar = React.createClass({
   propTypes: {
-    goToPage: React.PropTypes.func,
-    activeTab: React.PropTypes.number,
-    tabs: React.PropTypes.array
+    goToPage: PropTypes.func,
+    activeTab: PropTypes.number,
+    tabs: PropTypes.array
   },
 
   renderTabOption(name, page) {

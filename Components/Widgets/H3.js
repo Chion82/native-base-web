@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import Text from './Text';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
@@ -10,7 +11,7 @@ import computeProps from '../../Utils/computeProps';
 export default class H3NB extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object
+        style : PropTypes.object
     }
     
     prepareRootProps() {

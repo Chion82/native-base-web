@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {View} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
@@ -11,7 +12,7 @@ import Text from './Text';
 export default class BadgeNB extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object
+        style : PropTypes.object
     }
 
     prepareRootProps() {

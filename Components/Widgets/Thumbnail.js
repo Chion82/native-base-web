@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Image} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
@@ -10,10 +11,10 @@ import _ from 'lodash';
 export default class ThumbnailNB extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object,
-        size : React.PropTypes.number,
-        circular : React.PropTypes.bool,
-        square : React.PropTypes.bool
+        style : PropTypes.object,
+        size : PropTypes.number,
+        circular : PropTypes.bool,
+        square : PropTypes.bool
     }
 
     getInitialStyle() {

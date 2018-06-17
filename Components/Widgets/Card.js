@@ -2,6 +2,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {View} from 'react-native';
 import NativeBaseComponent from '../Base/NativeBaseComponent';
 import computeProps from '../../Utils/computeProps';
@@ -9,7 +10,7 @@ import computeProps from '../../Utils/computeProps';
 export default class CardNB extends NativeBaseComponent {
 
     propTypes: {
-        style : React.PropTypes.object
+        style : PropTypes.object
     }
 
     getInitialStyle() {

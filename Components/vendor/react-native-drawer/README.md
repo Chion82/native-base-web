@@ -152,7 +152,7 @@ onPress={() => {this.drawer.open()}}
 ```
 2. Using Context
 ```js
-contextTypes = {drawer: React.PropTypes.object}
+contextTypes = {drawer: PropTypes.object}
 // later...
 this.context.drawer.open()
 ```
